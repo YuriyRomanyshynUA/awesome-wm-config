@@ -1,0 +1,39 @@
+#!/bin/bash
+
+# toggle synaptic touchpad on/off
+
+# # get current state
+# SYNSTATE=$(synclient -l | grep Touchpad | awk '{ print $3 }')
+
+# # change to other state
+# if [ $SYNSTATE = 0 ]; then
+#     synclient touchpadoff=1
+# elif [ $SYNSTATE = 1 ]; then
+#     synclient touchpadoff=0
+# else
+#     echo "Couldn't get touchpad status from synclient"
+#     exit 1
+# fi
+# exit 0
+
+
+declare -i ID
+ID=$( xinput list | \egrep -Eo 'Touchpad\s*id\=[0-9]{1,2}' | \egrep -Eo '[0-9]{1,2}' )
+
+echo "Device ID: $ID"
+
+declare -i STATE
+STATE=$( xinput list-props $ID | \grep 'Device Enabled' | \awk '{print $4}' )
+
+echo "State: $STATE"
+
+if [ $STATE -eq 1 ]
+then
+    xinput disable $ID
+    echo "Touchpad disabled."
+    xsetroot -name "Touchpad disabled!"
+else
+    xinput enable $ID
+    echo "Touchpad enabled."
+    xsetroot -name "Touchpad enabled!"
+fi
