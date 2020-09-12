@@ -5,14 +5,20 @@
 
 local themes_path = require("gears.filesystem").get_themes_dir()
 local dpi = require("beautiful.xresources").apply_dpi
+local icons_path = "/home/yura/.config/awesome/res/icons/"
+
 
 -- {{{ Main
 local theme = {}
-theme.wallpaper = themes_path .. "zenburn/zenburn-background.png"
+
+theme.wallpaper = "/home/yura/.config/awesome/res/wallpaper.jpg"
 -- }}}
 
+
 -- {{{ Styles
-theme.font      = "sans 12"
+theme.font = "Play 12"
+theme.widgets_font = "Play 10"
+
 
 -- {{{ Colors
 theme.fg_normal  = "#DCDCCC"
@@ -23,6 +29,7 @@ theme.bg_focus   = "#1E2320"
 theme.bg_urgent  = "#3F3F3F"
 theme.bg_systray = theme.bg_normal
 -- }}}
+
 
 
 -- {{{ Borders
@@ -60,6 +67,7 @@ theme.titlebar_bg_normal = "#3F3F3F"
 --theme.border_widget    = "#3F3F3F"
 -- }}}
 
+
 -- {{{ Mouse finder
 theme.mouse_finder_color = "#CC9393"
 -- mouse_finder_[timeout|animate_timeout|radius|factor]
@@ -73,6 +81,7 @@ theme.menu_height = dpi(15)
 theme.menu_width  = dpi(100)
 -- }}}
 
+
 -- {{{ Icons
 -- {{{ Taglist
 theme.taglist_squares_sel   = themes_path .. "zenburn/taglist/squarefz.png"
@@ -80,10 +89,12 @@ theme.taglist_squares_unsel = themes_path .. "zenburn/taglist/squarez.png"
 --theme.taglist_squares_resize = "false"
 -- }}}
 
+
 -- {{{ Misc
 theme.awesome_icon           = themes_path .. "zenburn/awesome-icon.png"
 theme.menu_submenu_icon      = themes_path .. "default/submenu.png"
 -- }}}
+
 
 -- {{{ Layout
 theme.layout_tile       = themes_path .. "zenburn/layouts/tile.png"
@@ -132,6 +143,23 @@ theme.titlebar_maximized_button_focus_inactive  = themes_path .. "zenburn/titleb
 theme.titlebar_maximized_button_normal_inactive = themes_path .. "zenburn/titlebar/maximized_normal_inactive.png"
 -- }}}
 -- }}}
+
+
+theme.battery_icons = {
+  charging = icons_path .. "/battery/charging.svg",
+  full = icons_path .. "/battery/full.svg",
+  good = icons_path .. "/battery/good.svg",
+  half = icons_path .. "/battery/half.svg",
+  low = icons_path .. "/battery/low.svg",
+  empty = icons_path .. "/battery/empty.svg"
+}
+
+theme.pulseaudio_icons = {
+  muted = icons_path .. "/audio/mute.svg",
+  normal = icons_path .. "/audio/speaker.svg"
+}
+
+theme.brightness_icon = icons_path .. "/brightness/sun.svg"
 
 return theme
 
