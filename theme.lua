@@ -28,6 +28,7 @@ theme.bg_normal  = "#3F3F3F"
 theme.bg_focus   = "#1E2320"
 theme.bg_urgent  = "#3F3F3F"
 theme.bg_systray = theme.bg_normal
+theme.systray_icon_spacing = 10
 -- }}}
 
 
@@ -82,10 +83,12 @@ theme.menu_width  = dpi(100)
 -- }}}
 
 
--- {{{ Icons
 -- {{{ Taglist
 theme.taglist_squares_sel   = themes_path .. "zenburn/taglist/squarefz.png"
 theme.taglist_squares_unsel = themes_path .. "zenburn/taglist/squarez.png"
+theme.taglist_font = "Play 16"
+theme.taglist_spacing = 12
+theme.taglist_wibar_width = 35
 --theme.taglist_squares_resize = "false"
 -- }}}
 
