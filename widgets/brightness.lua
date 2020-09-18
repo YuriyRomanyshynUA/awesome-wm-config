@@ -35,13 +35,13 @@ local function worker(args)
 
     widget = wibox.widget {
       {
-	brightness_icon,
-	{
-	  brightness_text,
-	  -- left = 3, right = 3,
-	  widget = wibox.container.margin
-	},
-	layout = wibox.layout.fixed.horizontal
+        brightness_icon,
+        {
+          brightness_text,
+          -- left = 3, right = 3,
+          widget = wibox.container.margin
+        },
+        layout = wibox.layout.fixed.horizontal
       },
       left = 5, right = 5,
       widget = wibox.container.margin

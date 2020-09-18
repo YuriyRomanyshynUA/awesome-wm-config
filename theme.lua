@@ -88,9 +88,20 @@ theme.taglist_squares_sel   = themes_path .. "zenburn/taglist/squarefz.png"
 theme.taglist_squares_unsel = themes_path .. "zenburn/taglist/squarez.png"
 theme.taglist_font = "Play 16"
 theme.taglist_spacing = 12
-theme.taglist_wibar_width = 35
+theme.taglist_wibar_width = 32
+theme.taglist_margin_top = 15
+theme.taglist_margin_bottom = 50
 --theme.taglist_squares_resize = "false"
 -- }}}
+
+
+--- {{{
+theme.taskslist_spacing = 10
+theme.taskslist_icon_margin = 2
+theme.taskslist_tab_width = 250
+theme.taskslist_underscore_width = 2
+
+--- }}}
 
 
 -- {{{ Misc
